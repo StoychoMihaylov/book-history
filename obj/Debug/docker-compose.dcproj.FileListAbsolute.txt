@@ -28,3 +28,7 @@ C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Data.pdb
 C:\Users\stmih\source\repos\BookHistory\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 C:\Users\stmih\source\repos\BookHistory\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\stmih\source\repos\BookHistory\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Services.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Services.pdb
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Models.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Models.pdb
