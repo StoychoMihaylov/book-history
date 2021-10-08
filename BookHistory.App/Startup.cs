@@ -1,5 +1,8 @@
 namespace BookHistory.App
 {
+    using BookHistory.App.Infrastructure;
+    using BookHistory.Data.Context;
+    using BookHistory.Data.DbIniializer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -22,9 +25,12 @@ namespace BookHistory.App
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddPosgreSQLWithEntityFramework(this.Configuration); // EF & Postgre
+            services.AddDependancyInjectionResolver(); //DI
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, BookHistoryDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -61,6 +67,8 @@ namespace BookHistory.App
                     spa.UseProxyToSpaDevelopmentServer("http://angular.app:4200");
                 }
             });
+
+            BookHistoryDbInitializer.SeedDb(context);
         }
     }
 }
