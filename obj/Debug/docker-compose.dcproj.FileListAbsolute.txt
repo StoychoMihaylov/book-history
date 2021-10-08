@@ -14,8 +14,17 @@ C:\Users\stmih\source\repos\BookHistory\bin\Debug\ClientApp\tsconfig.json
 C:\Users\stmih\source\repos\BookHistory\bin\Debug\ClientApp\tslint.json
 C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.App.exe
 C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.App.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Data.dll
 C:\Users\stmih\source\repos\BookHistory\bin\Debug\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\Npgsql.dll
 C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.App.pdb
+C:\Users\stmih\source\repos\BookHistory\bin\Debug\BookHistory.Data.pdb
 C:\Users\stmih\source\repos\BookHistory\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 C:\Users\stmih\source\repos\BookHistory\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\stmih\source\repos\BookHistory\obj\Debug\docker-compose.dcproj.CopyComplete
