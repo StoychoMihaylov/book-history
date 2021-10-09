@@ -24,6 +24,7 @@
             { 
                 Title = bookBm.Title,
                 Description = bookBm.Description,
+                PublishDate = DateTime.Now,
                 Book_Author = await CreateBook_AuthorJointTableRelations(bookBm.AuthorNames)
             };
 
