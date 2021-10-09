@@ -13,17 +13,27 @@
 
   <div class="form-group">
     <hr>
-    <label for="authors">Authors</label>
+    <label for="author">Authors</label>
     <div *ngFor="let name of book.authorNames">
       <span>{{ name }}</span>
     </div>
     <br>
-    <input class="form-control"  id="authors" [(ngModel)]="authorName" name="authors" required>
+    <input
+      class="form-control"
+      id="author"
+      name="author"
+      (click)="getAuthorNameAutocompletes()"
+      (ngModelChange)="filterAuthorAutocompletes($event)"
+      [(ngModel)]="authorName"
+      autocomplete="off" required
+    >
+    <div class="autocompleteOptions" (click)="setAuthor(authorName)" *ngFor="let authorName of filteredAuthorNameAutocompletes">
+      {{ authorName }}
+    </div>
     <br>
     <button class="btn btn-primary" (click)="addAuthor()">Add Author</button>
     <hr>
   </div>
-
   <button class="btn btn-primary" (click)="createBook()">Create</button>
 </form>
 

@@ -1,0 +1,19 @@
+.autocompleteOptions {
+    position: relative;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.autocompleteOptions:hover {
+    cursor: pointer;
+    background-color: rgb(102, 178, 255);
+}
+
+.autocompleteOptions:active {
+    cursor: pointer;
+    background-color: grey;
+}
