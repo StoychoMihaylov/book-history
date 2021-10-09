@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookHistory.App", "BookHist
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1FDB1BD1-66E5-46A2-8065-0E50C8FD7FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookHistory.Data", "..\BookHistory.Data\BookHistory.Data.csproj", "{FA3BAED1-5E58-463E-B6DC-999782D88794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookHistory.Data", "BookHistory.Data\BookHistory.Data.csproj", "{237D12C0-5BE4-4AE2-9185-EB08BA03778A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookHistory.Services", "..\BookHistory.Services\BookHistory.Services.csproj", "{BACA8048-0054-40A1-A4FD-C308D9EEAE71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookHistory.Models", "BookHistory.Models\BookHistory.Models.csproj", "{61AAC09E-9147-4B2D-90A7-1838FE0F353D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookHistory.Models", "..\BookHistory.Models\BookHistory.Models.csproj", "{6F2D1A38-FFB6-42B5-ACFF-3F6B1E95A0A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookHistory.Services", "BookHistory.Services\BookHistory.Services.csproj", "{FFEE9268-9231-490E-B884-939F2F01E82D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,18 +27,18 @@ Global
 		{1FDB1BD1-66E5-46A2-8065-0E50C8FD7FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDB1BD1-66E5-46A2-8065-0E50C8FD7FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDB1BD1-66E5-46A2-8065-0E50C8FD7FC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA3BAED1-5E58-463E-B6DC-999782D88794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA3BAED1-5E58-463E-B6DC-999782D88794}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA3BAED1-5E58-463E-B6DC-999782D88794}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA3BAED1-5E58-463E-B6DC-999782D88794}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BACA8048-0054-40A1-A4FD-C308D9EEAE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BACA8048-0054-40A1-A4FD-C308D9EEAE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BACA8048-0054-40A1-A4FD-C308D9EEAE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BACA8048-0054-40A1-A4FD-C308D9EEAE71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F2D1A38-FFB6-42B5-ACFF-3F6B1E95A0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F2D1A38-FFB6-42B5-ACFF-3F6B1E95A0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F2D1A38-FFB6-42B5-ACFF-3F6B1E95A0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F2D1A38-FFB6-42B5-ACFF-3F6B1E95A0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237D12C0-5BE4-4AE2-9185-EB08BA03778A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237D12C0-5BE4-4AE2-9185-EB08BA03778A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237D12C0-5BE4-4AE2-9185-EB08BA03778A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237D12C0-5BE4-4AE2-9185-EB08BA03778A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61AAC09E-9147-4B2D-90A7-1838FE0F353D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61AAC09E-9147-4B2D-90A7-1838FE0F353D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61AAC09E-9147-4B2D-90A7-1838FE0F353D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61AAC09E-9147-4B2D-90A7-1838FE0F353D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEE9268-9231-490E-B884-939F2F01E82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEE9268-9231-490E-B884-939F2F01E82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEE9268-9231-490E-B884-939F2F01E82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEE9268-9231-490E-B884-939F2F01E82D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -59,6 +59,8 @@ services:
     - published: 5050
       target: 80
     restart: always
+    volumes:
+    - C:\Users\stmih\source\repos\BookHistory\src\Tributech.DataSpace.DB\pgadmin_servers.json:/pgadmin4/servers.json:rw
   postgre.server:
     container_name: postgre.book.history.srv
     environment:

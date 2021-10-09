@@ -53,6 +53,8 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "5050:80"
+    volumes:
+      - ./src/Tributech.DataSpace.DB/pgadmin_servers.json:/pgadmin4/servers.json
 
 volumes:
   postgresql-db:

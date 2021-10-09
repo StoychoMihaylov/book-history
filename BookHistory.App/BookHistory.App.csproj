@@ -25,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BookHistory.Data\BookHistory.Data.csproj" />
-    <ProjectReference Include="..\..\BookHistory.Models\BookHistory.Models.csproj" />
-    <ProjectReference Include="..\..\BookHistory.Services\BookHistory.Services.csproj" />
+    <ProjectReference Include="..\BookHistory.Data\BookHistory.Data.csproj" />
+    <ProjectReference Include="..\BookHistory.Models\BookHistory.Models.csproj" />
+    <ProjectReference Include="..\BookHistory.Services\BookHistory.Services.csproj" />
   </ItemGroup>
 
 </Project>

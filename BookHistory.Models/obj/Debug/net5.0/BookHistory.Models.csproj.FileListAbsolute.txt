@@ -1,0 +1,12 @@
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\bin\Debug\net5.0\BookHistory.Models.deps.json
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\bin\Debug\net5.0\BookHistory.Models.dll
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\bin\Debug\net5.0\ref\BookHistory.Models.dll
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\bin\Debug\net5.0\BookHistory.Models.pdb
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.csprojAssemblyReference.cache
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.AssemblyInfoInputs.cache
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.AssemblyInfo.cs
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.csproj.CoreCompileInputs.cache
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.dll
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\ref\BookHistory.Models.dll
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.pdb
