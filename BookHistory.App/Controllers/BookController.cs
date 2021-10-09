@@ -32,7 +32,7 @@
             catch (Exception ex)
             {
                 this.logger.LogError(ex, "Method: {Methid}", nameof(CreateNewBook));
-                return StatusCode(400);
+                return StatusCode(400, ex.Message);
             }
 
             return StatusCode(201, bookId);
