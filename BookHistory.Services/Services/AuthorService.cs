@@ -2,8 +2,11 @@
 {
     using BookHistory.Data.Entities;
     using BookHistory.Data.Interfaces;
+    using BookHistory.Models.ViewModels;
     using BookHistory.Services.Interfaces;
     using Microsoft.EntityFrameworkCore;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     public class AuthorService : Service, IAuthorService
@@ -32,6 +35,13 @@
             }
 
             return author;
+        }
+
+        public async Task<ICollection<AuthorViewModel>> GetListOfAuthorNames()
+        {
+            return await this.Context.Authors
+                .Select(x => new AuthorViewModel { Name = x.Name})
+                .ToArrayAsync();
         }
     }
 }

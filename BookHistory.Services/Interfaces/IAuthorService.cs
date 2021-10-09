@@ -1,6 +1,8 @@
 ﻿namespace BookHistory.Services.Interfaces
 {
     using BookHistory.Data.Entities;
+    using BookHistory.Models.ViewModels;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     public interface IAuthorService
@@ -11,5 +13,11 @@
         /// <param name="authorName"></param>
         /// <returns></returns>
         Task<Author> FindOrCreateNewAuthor(string authorName);
+
+        /// <summary>
+        /// Get collection of all athour names.
+        /// </summary>
+        /// <returns></returns>
+        Task<ICollection<AuthorViewModel>> GetListOfAuthorNames();
     }
 }
