@@ -11,6 +11,7 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime PublishDate { get; set; }
+        public virtual ICollection<BookEditHistory> BookEditHistories { get; set; }
         public virtual ICollection<Book_Author> Book_Author { get; set; } //Join table
     }
 }

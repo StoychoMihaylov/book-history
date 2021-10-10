@@ -11,9 +11,16 @@
 
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<BookEditHistory> BookEditHistories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // One to many
+            modelBuilder.Entity<Book>()
+                .HasMany(x => x.BookEditHistories)
+                .WithOne(x => x.Book)
+                .OnDelete(DeleteBehavior.Cascade);
+
             //Many to many join table
             modelBuilder.Entity<Book_Author>()
                 .HasKey(x => new { x.BookId, x.AuthorId });

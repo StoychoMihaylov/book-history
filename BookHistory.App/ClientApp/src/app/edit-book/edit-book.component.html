@@ -1,5 +1,5 @@
-<h1 id="tableLabel">Create new book</h1>
-
+<h1 id="tableLabel">Edit {{book.title}} book</h1>
+<br>
 <form>
   <div class="form-group">
     <label for="title">Title</label>
@@ -11,14 +11,18 @@
     <textarea type="text" rows="4" cols="50" class="form-control" id="description" [(ngModel)]="book.description" name="description" required></textarea>
   </div>
 
+  <div>
+    <span>Publish date: {{ book.publishDate | date :'short' }}</span>
+  </div>
+
   <div class="form-group">
     <hr>
     <label for="author">Authors</label>
     <div>
-      <span class="author" *ngFor="let name of book.authorNames">
-          <span>{{ name }}</span>
-          <button class="btn btn-danger" (click)="removeAuthorName(name)" >Remove</button>
-      </span>
+        <span class="author" *ngFor="let name of book.authorNames">
+            <span>{{ name }}</span>
+            <button class="btn btn-danger" (click)="removeAuthorName(name)" >Remove</button>
+        </span>
     </div>
     <br>
     <input
@@ -37,7 +41,5 @@
     <button class="btn btn-primary" (click)="addAuthor()">Add Author</button>
     <hr>
   </div>
-  <button class="btn btn-primary" (click)="createBook()">Create</button>
+  <button class="btn btn-primary" (click)="editBook()">Save</button>
 </form>
-
-

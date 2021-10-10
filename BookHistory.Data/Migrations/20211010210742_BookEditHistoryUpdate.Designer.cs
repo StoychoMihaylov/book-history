@@ -3,15 +3,17 @@ using System;
 using BookHistory.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BookHistory.Data.Migrations
 {
     [DbContext(typeof(BookHistoryDbContext))]
-    partial class BookHistoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211010210742_BookEditHistoryUpdate")]
+    partial class BookEditHistoryUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

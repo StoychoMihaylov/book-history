@@ -1,0 +1,4 @@
+.book-table-row:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}

@@ -3,15 +3,17 @@ using System;
 using BookHistory.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BookHistory.Data.Migrations
 {
     [DbContext(typeof(BookHistoryDbContext))]
-    partial class BookHistoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211010181811_AddingBookEditHistory")]
+    partial class AddingBookEditHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,20 +61,14 @@ namespace BookHistory.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("AuthorChanges")
-                        .HasColumnType("text");
-
                     b.Property<Guid?>("BookId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Changes")
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("DateOfEdit")
                         .HasColumnType("timestamp without time zone");
-
-                    b.Property<string>("DescriptionChanges")
-                        .HasColumnType("text");
-
-                    b.Property<string>("TitleChanges")
-                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

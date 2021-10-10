@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace BookHistory.Models.BindingModels
+﻿namespace BookHistory.Models.BindingModels
 {
-    public class BookBindingModel
+    using System.Collections.Generic;
+
+    public class CreateBookBindingModel
     {
         public string Title { get; set; }
         public string Description { get; set; }

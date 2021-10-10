@@ -1,22 +1,23 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit  } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Book } from '../models/book';
 
 @Component({
-  selector: 'create-book',
-  templateUrl: './create-book.component.html',
-  styleUrls: ['./create-book.component.css']
+  selector: 'edit-book',
+  templateUrl: './edit-book.component.html',
+  styleUrls: ['./edit-book.component.css']
 })
-export class CreateBook {
-  public bookId: string;
+export class EditBook implements OnInit  {
   public authorName: string;
   public book = new Book();
   public authorNameAutocompletes: Array<string> = [];
   public filteredAuthorNameAutocompletes: Array<string> = [];
 
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
-    this.http = http;
-    this.baseUrl = baseUrl;
+  constructor(private route: ActivatedRoute, private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) { }
+
+  ngOnInit() {
+    this.getBookDetails();
   }
 
   addAuthor() {
@@ -28,15 +29,21 @@ export class CreateBook {
     this.book.authorNames = this.book.authorNames.filter(name => name !== authorName)
   }
 
-  createBook() {
-    this.http.post<any>(this.baseUrl + 'book', this.book).subscribe(response => {
-      this.bookId = response;
-    }, error => console.error(error));
-  }
-
   setAuthor(authorName) {
     this.authorName = authorName;
     this.filteredAuthorNameAutocompletes = []; // clean
+  }
+
+  editBook() {
+    this.http.put<any>(this.baseUrl + 'book', this.book).subscribe(response => {
+      console.log(response);
+    }, error => console.error(error));
+  }
+
+  getBookDetails() {
+    this.http.get<any>(this.baseUrl + `book/${this.route.snapshot.params.id}`).subscribe(response => {
+      this.book = response;
+    }, error => console.error(error));
   }
 
   getAuthorNameAutocompletes() {
