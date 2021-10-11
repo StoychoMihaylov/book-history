@@ -9,7 +9,7 @@ Technologies:
   - Docker compose for container orchestration
   
 # The idea of the app
-Create, edit a book and then get list of all books as well as detailed pages for a book with history of all edits and changes.
+Create or edit a book and then get list of all books as well as detailed pages for each book with history of all edits and changes.
 
 # How to run BookHistory app
 1. Make sure you have installed on your machine: 
