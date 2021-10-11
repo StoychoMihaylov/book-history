@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateBook } from './create-book/create-book.component';
 import { EditBook } from './edit-book/edit-book.component';
 import { BookDetails } from './book-details/book-details.component';
+import { BookService } from './services/book.service'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { BookDetails } from './book-details/book-details.component';
       { path: 'book-details/:id', component: BookDetails }
     ])
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

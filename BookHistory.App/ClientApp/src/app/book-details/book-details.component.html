@@ -1,4 +1,4 @@
-<h1 id="tableLabel">Edit {{book.title}} book</h1>
+<h1 id="tableLabel">{{book.title}} book</h1>
 <br>
 
 <div class="form-group">
@@ -24,8 +24,9 @@
         </span>
     </div>
 </div>
-
+<button class="btn btn-primary" [routerLink]="['/edit-book/', book.id]">Edit</button>
 <hr>
+
 <div *ngIf="book.bookEditHistories.length > 0">
     <label>History of changes</label>
 
