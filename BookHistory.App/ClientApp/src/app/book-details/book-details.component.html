@@ -1,0 +1,66 @@
+<h1 id="tableLabel">Edit {{book.title}} book</h1>
+<br>
+
+<div class="form-group">
+<label>Title</label>
+<p class="form-control">{{ book.title }}</p>
+</div>
+
+<div class="form-group">
+<label>Description</label>
+<p class="form-control">{{ book.description }}</p>
+</div>
+
+<div class="form-group">
+<label>Publish date:</label>
+<p class="form-control">{{ book.publishDate | date :'short' }}</p>
+</div>
+
+<div class="form-group">
+    <label>Authors</label>
+    <div class="form-control">
+        <span class="author" *ngFor="let name of book.authorNames">
+            {{ name }}
+        </span>
+    </div>
+</div>
+
+<hr>
+<div *ngIf="book.bookEditHistories.length > 0">
+    <label>History of changes</label>
+
+    <div>
+        <button class="filter-bttn" (click)="setDefaultFilter()">By default</button>
+        <button class="filter-bttn" (click)="orderByDateASC()">By date (asc)</button>
+        <button class="filter-bttn" (click)="orderByDateDESC()">By date (desc)</button>
+        <button class="filter-bttn" (click)="filterByTitleChange()">Title change</button>
+        <button class="filter-bttn" (click)="filterByDescriptionChange()">Description change</button>
+        <button class="filter-bttn" (click)="filterByAuthorChange()">Author change</button>
+    <div>
+    <hr>
+    <div>
+        <div class="row book-edits-container" *ngFor="let edit of changesPage; let i = index">
+            <div>
+                <div>Date of edit: {{ edit.dateOfEdit | date :'short' }}</div>
+                <div *ngIf="edit.titleChanges">{{ index }} Title has been changed: {{ edit.titleChanges }}</div>
+                <div *ngIf="edit.descriptionChanges">Description has been changed: {{ edit.descriptionChanges }}</div>
+                <div *ngIf="edit.authorChanges">Authors have been changed: {{ edit.authorChanges }}</div>
+            <div>
+        </div>
+    </div>
+    <hr>
+
+</div>
+<br>
+
+<div *ngIf="changesPage.length > 0" class="col-xs-1 pagination-bttns" align="center">
+    <button class="filter-bttn" (click)="paginationLeft()">&#x3c;</button>
+    <span>{{ page + 1 }} / {{ numberOfPages }}</span>
+    <button class="filter-bttn" (click)="paginationRight()">&#x3e;</button>
+</div>
+
+
+
+
+
+

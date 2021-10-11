@@ -1,20 +1,23 @@
 <h1>History of book changes</h1>
 
-<!-- <p *ngIf="!books"><em>Loading...</em></p> -->
-
-<!-- <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books">
+<br>
+<p>Click on any book to see book history of changes</p>
+<table class='table table-striped' aria-labelledby="tableLabel">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
-      <th>Publish date</th>
+      <th>Authors</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let book of books">
+    <tr class="book-table-row" [routerLink]="['/book-details/', book.id]" *ngFor="let book of books">
       <td>{{ book.title }}</td>
-      <td>{{ book.description }}</td>
-      <td>{{ book.publishDate }}</td>
+      <td>
+        <span *ngFor="let author of book.authors">{{ author }}, </span>
+      </td>
+      <td>
+        <button class="btn btn-primary" [routerLink]="['/edit-book/', book.id]">Edit</button>
+      </td>
     </tr>
   </tbody>
-</table> -->
+</table>

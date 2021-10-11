@@ -22,7 +22,7 @@
         public async Task<IActionResult> GetListOfAuthorNames()
         {
             var authorNames = await this.authorService.GetListOfAuthorNames();
-            return StatusCode(201, authorNames);
+            return StatusCode(200, authorNames);
         }
     }
 }

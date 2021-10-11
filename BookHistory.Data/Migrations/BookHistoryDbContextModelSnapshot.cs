@@ -53,6 +53,34 @@ namespace BookHistory.Data.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("BookHistory.Data.Entities.BookEditHistory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("AuthorChanges")
+                        .HasColumnType("text");
+
+                    b.Property<Guid?>("BookId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("DateOfEdit")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("DescriptionChanges")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TitleChanges")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("BookEditHistories");
+                });
+
             modelBuilder.Entity("BookHistory.Data.Entities.Book_Author", b =>
                 {
                     b.Property<Guid>("BookId")
@@ -66,6 +94,16 @@ namespace BookHistory.Data.Migrations
                     b.HasIndex("AuthorId");
 
                     b.ToTable("Book_Author");
+                });
+
+            modelBuilder.Entity("BookHistory.Data.Entities.BookEditHistory", b =>
+                {
+                    b.HasOne("BookHistory.Data.Entities.Book", "Book")
+                        .WithMany("BookEditHistories")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("BookHistory.Data.Entities.Book_Author", b =>
@@ -95,6 +133,8 @@ namespace BookHistory.Data.Migrations
             modelBuilder.Entity("BookHistory.Data.Entities.Book", b =>
                 {
                     b.Navigation("Book_Author");
+
+                    b.Navigation("BookEditHistories");
                 });
 #pragma warning restore 612, 618
         }

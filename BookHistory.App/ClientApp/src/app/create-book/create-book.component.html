@@ -14,8 +14,11 @@
   <div class="form-group">
     <hr>
     <label for="author">Authors</label>
-    <div *ngFor="let name of book.authorNames">
-      <span>{{ name }}</span>
+    <div>
+      <span class="author" *ngFor="let name of book.authorNames">
+          <span>{{ name }}</span>
+          <button class="btn btn-danger" (click)="removeAuthorName(name)" >Remove</button>
+      </span>
     </div>
     <br>
     <input

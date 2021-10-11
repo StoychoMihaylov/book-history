@@ -18,6 +18,6 @@
         /// Get collection of all athour names.
         /// </summary>
         /// <returns></returns>
-        Task<ICollection<AuthorViewModel>> GetListOfAuthorNames();
+        Task<ICollection<GetListOfAuthorNamesViewModel>> GetListOfAuthorNames();
     }
 }

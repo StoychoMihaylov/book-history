@@ -1,0 +1,31 @@
+.book-edits-container {
+    padding: 10px;
+}
+
+.book-edits-container:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.filter-bttn {
+    color:white;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    background-color: lightskyblue;
+}
+
+.filter-bttn:hover {
+    background-color: lightgray;
+}
+
+.pagination-bttns {
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.pagination-bttns span {
+    margin-right: 10px;
+}

@@ -9,8 +9,4 @@
     <ProjectReference Include="..\BookHistory.Models\BookHistory.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
-
 </Project>

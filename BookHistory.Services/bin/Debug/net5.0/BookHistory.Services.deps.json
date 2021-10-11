@@ -199,6 +199,9 @@
         }
       },
       "BookHistory.Models/1.0.0": {
+        "dependencies": {
+          "BookHistory.Data": "1.0.0"
+        },
         "runtime": {
           "BookHistory.Models.dll": {}
         }

@@ -107,7 +107,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\stmih\\source\\repos\\BookHistory\\BookHistory.Data\\BookHistory.Data.csproj": {
+                "projectPath": "C:\\Users\\stmih\\source\\repos\\BookHistory\\BookHistory.Data\\BookHistory.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

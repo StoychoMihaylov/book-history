@@ -17,8 +17,8 @@
 
         public async Task<Author> FindOrCreateNewAuthor(string authorName)
         {
-            var author = await this.Context
-                   .Authors
+            var author = await this.Context.Authors
+                   .AsNoTracking()
                    .FirstOrDefaultAsync(author => author.Name == authorName);
 
             if (author == null)
@@ -37,10 +37,11 @@
             return author;
         }
 
-        public async Task<ICollection<AuthorViewModel>> GetListOfAuthorNames()
+        public async Task<ICollection<GetListOfAuthorNamesViewModel>> GetListOfAuthorNames()
         {
             return await this.Context.Authors
-                .Select(x => new AuthorViewModel { Name = x.Name})
+                .AsNoTracking()
+                .Select(x => new GetListOfAuthorNamesViewModel { Name = x.Name})
                 .ToArrayAsync();
         }
     }

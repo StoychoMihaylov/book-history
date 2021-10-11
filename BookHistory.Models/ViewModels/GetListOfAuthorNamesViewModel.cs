@@ -1,6 +1,6 @@
 ﻿namespace BookHistory.Models.ViewModels
 {
-    public class AuthorViewModel
+    public class GetListOfAuthorNamesViewModel
     {
         public string Name { get; set; }
     }
