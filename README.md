@@ -22,6 +22,7 @@ Create or edit a book and then get list of all books as well as detailed pages f
 3. Go inside the project main directory and open Powershell or CMD. Make sure Docker for Windows is started and running and execute the following commands:
     - docker-compose build
     - docker-compose up
-   Or open Visual Studio, set "docker-compose" project as a "startup project" and run it from VS.
     
-4. The browser will throw an exception that it can't find the page, wait for a while until Angular finish installing the packages and refresh the page.
+4. Or open Visual Studio, set "docker-compose" project as a "startup project" and run it from VS.
+    
+5. The browser will throw an exception that it can't find the page, wait for a while until Angular finish installing the packages and refresh the page.
