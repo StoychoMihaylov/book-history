@@ -139,6 +139,7 @@
         {
             var book = await this.Context.Books
                 .AsNoTracking()
+                .Include(x => x.BookEditHistories)
                 .Include(x => x.Book_Author)
                     .ThenInclude(x => x.Author)
                 .Where(x => x.Id == id)
@@ -148,6 +149,14 @@
                     Title = book.Title,
                     Description = book.Description,
                     PublishDate = book.PublishDate,
+                    BookEditHistories = book.BookEditHistories
+                        .Select(x => new BookEditHistoryViewModel 
+                        {
+                            DateOfEdit = x.DateOfEdit,
+                            TitleChanges = x.TitleChanges,
+                            DescriptionChanges = x.DescriptionChanges,
+                            AuthorChanges = x.AuthorChanges,
+                        }).ToArray(),
                     AuthorNames = book.Book_Author
                         .Where(joinTable => joinTable.BookId == book.Id)
                         .Select(x => x.Author.Name)

@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="book-table-row" *ngFor="let book of books">
+    <tr class="book-table-row" [routerLink]="['/book-details/', book.id]" *ngFor="let book of books">
       <td>{{ book.title }}</td>
       <td>
         <span *ngFor="let author of book.authors">{{ author }}, </span>

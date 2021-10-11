@@ -9,6 +9,7 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime PublishDate { get; set; }
+        public ICollection<BookEditHistoryViewModel> BookEditHistories { get; set; }
         public ICollection<string> AuthorNames { get; set; }
     }
 }

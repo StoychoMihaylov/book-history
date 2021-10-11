@@ -10,3 +10,6 @@ C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\Book
 C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.dll
 C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\ref\BookHistory.Models.dll
 C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.pdb
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\bin\Debug\net5.0\BookHistory.Data.dll
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\bin\Debug\net5.0\BookHistory.Data.pdb
+C:\Users\stmih\source\repos\BookHistory\BookHistory.Models\obj\Debug\net5.0\BookHistory.Models.csproj.CopyComplete

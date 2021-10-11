@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Book } from '../models/book';
 
@@ -14,7 +15,7 @@ export class CreateBook {
   public authorNameAutocompletes: Array<string> = [];
   public filteredAuthorNameAutocompletes: Array<string> = [];
 
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+  constructor( private router: Router, private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
     this.http = http;
     this.baseUrl = baseUrl;
   }
@@ -30,7 +31,7 @@ export class CreateBook {
 
   createBook() {
     this.http.post<any>(this.baseUrl + 'book', this.book).subscribe(response => {
-      this.bookId = response;
+      this.router.navigate([`/book-details/${response}`])
     }, error => console.error(error));
   }
 
