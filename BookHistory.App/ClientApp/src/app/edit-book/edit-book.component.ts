@@ -2,6 +2,7 @@ import { Component, Inject, OnInit  } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Book } from '../models/book';
+import { BookService } from '../services/book.service'
 
 @Component({
   selector: 'edit-book',
@@ -14,10 +15,13 @@ export class EditBook implements OnInit  {
   public authorNameAutocompletes: Array<string> = [];
   public filteredAuthorNameAutocompletes: Array<string> = [];
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
-              private http: HttpClient,
-              @Inject('BASE_URL') private baseUrl: string)
+  constructor(
+    private bookService: BookService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private http: HttpClient,
+    @Inject('BASE_URL') private baseUrl: string
+    )
     { }
 
   ngOnInit() {
