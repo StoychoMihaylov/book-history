@@ -88,8 +88,26 @@
                 throw new NotFoundException($"Book {bookBm.Title} doesn't exists.");
             }
 
+            // Detect cahnges 1 variant
             await DetectBookChanges(book, bookBm);
             this.Context.Books.Update(book);
+
+            //// Detect changes 2 variant
+            //foreach (var entry in this.Context.ChangeTracker.Entries().Where(entry => entry.State == EntityState.Added || entry.State == EntityState.Modified))
+            //{
+            //    // Gets all properties from the changed entity by reflection.
+            //    foreach (var entityProperty in entry.Entity.GetType().GetProperties())
+            //    {
+            //        var propertyName = entityProperty.Name;
+            //        var currentValue = entry.Property(propertyName).CurrentValue;
+            //        var originalValue = entry.Property(propertyName).OriginalValue;
+            //        if (currentValue != originalValue)
+            //        {
+            //            // TO DO: create new BookEditHistory
+            //        }
+            //    }
+            //}
+
             await this.Context.SaveChangesAsync();
         }
 
@@ -100,16 +118,16 @@
 
             // Detect Title change
             if (!book.Title.Equals(bookBm.Title))
-            {
-                book.Title = bookBm.Title;
+            {      
                 editHistory.TitleChanges = $"\"{book.Title}\" title was changed to \"{bookBm.Title}\".";
+                book.Title = bookBm.Title;
             }
 
             // Detect Description change
             if (!book.Description.Equals(bookBm.Description))
-            {
-                book.Description = bookBm.Description;
+            {            
                 editHistory.DescriptionChanges = $"Description: \"{book.Description}\" was changed to: \"{bookBm.Description}\"";
+                book.Description = bookBm.Description;
             }
 
             // Detect Authors change
