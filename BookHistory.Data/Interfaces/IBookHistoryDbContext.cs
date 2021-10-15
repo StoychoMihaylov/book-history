@@ -2,6 +2,7 @@
 {
     using BookHistory.Data.Entities;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.ChangeTracking;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -10,6 +11,8 @@
         DbSet<Author> Authors { get; set; }
         DbSet<Book> Books { get; set; }
         DbSet<BookEditHistory> BookEditHistories { get; set; }
+
+        ChangeTracker ChangeTracker { get;}
 
         int SaveChanges();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
